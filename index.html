@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/react.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lang's Portfolio</title>
+  </head>
+  
+  <body class="font-primary min-h-screen">
+    <div
+    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[1] hidden lg:hidden"
+    id="overlay"></div>
+    <nav class="flex p-6 items-center bg-transparent justify-between absolute w-full">
+      <img class="w-10 cursor-pointer lg:hidden" id="menu-button" src="/assets/images/menu.png" >
+      
+      <a class="text-2xl lg:text-3xl uppercase text-neutral-900 font-bold cursor-pointer font-logo " href="index.html">LLL</a>
+       
+      <ul
+        class="text-lg bg-white h-full w-5/12 fixed top-0 left-0 px-10 py-20 md:text-xl lg:flex lg:gap-5 lg:static lg:p-0 lg:w-auto animate-slideOut lg:animate-none lg:bg-none z-[2] hidden"
+        id="menu"
+      >
+        <li class="absolute right-4 top-4 lg:hidden" id="exit-menu-button">
+          <i class="fa-solid fa-x text-2xl cursor-pointer"></i>
+        </li>
+        <li class="nav-item" data-hs-overlay="#hs-vertically-centered-modal">Contact</li>
+        <li class="nav-item"><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  
+    <div id="hs-vertically-centered-modal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto  bg-black-500 bg-opacity-50" data-contact-modal>
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center"
+      >
+        <div
+          class="w-full flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto bg-white-100 dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7"
+        >
+          <div
+            class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700"
+          >
+            <h3 class="font-bold text-gray-800 dark:text-neutral-50">
+              Contact Details
+            </h3>
+            <button
+              type="button"
+              class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700"
+              data-hs-overlay="#hs-vertically-centered-modal"
+            >
+              <span class="sr-only" id="close-modal">Close</span>
+              <svg
+                class="flex-shrink-0 size-4"
+                
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-4 overflow-y-auto">
+            <p class="flex items-center gap-x-2 text-gray-800 dark:text-gray-400">
+              Message me through Fiverr 
+              <img class="w-5 max-w-full" src="assets/images/fiverr-icon.svg" alt="">
+            </p>
+            <p class="font-bold">OR</p>
+            <p class="flex items-center gap-x-2">
+              <span>
+                Email me at
+                <span class="font-bold">                 langliland64@gmail.com
+                </span>
+              </span>
+              <i class="fa-solid fa-envelope"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>          
+    <main class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-landingPage lg:place-items-center">
+      <!-- <section class="hero"></section> -->
+      <section class="w-full lg:h-screen lg:flex items-center justify-center bg-[#B982FE]">
+        <img class="max-w-full max-h-full object-cover" src="assets/images/hero-mobile.png" alt="" data-hero>
+      </section>
+      
+      <section class="flex flex-col justify-center p-6">
+        <div class="flex items-center gap-x-7 mt-10">
+          <div>
+            <h1 class="text-5xl font-bold mb-2">Hello there!</h1>
+            <p class="text-neutral-600 text-3xl italic mb-5">My name is Lang</p>
+          </div>
+          <div>
+            <img class="w-20" src="assets/images/pfp.svg" alt="">
+          </div>
+        </div>
+
+        <p class="text-neutral-500 text-xl leading-10 mb-32 font-bold">I have a passion for web development, particularly using code to build the web. As a junior developer, I'm constantly seeking new challenges and opportunities to enhance my skills. At the moment, I'm learning React.js, so I can level up my UI/UX design skills. I'll admit that I'm not the best, but I don't disappoint.</p>
+        <div class="flex mb-7">
+
+          <button class="bg-[#c63fdb] text-neutral-50 py-2 px-4 hover:bg-neutral-50 hover:text-[#c63fdb] ease-in duration-200 rounded-lg font-primary font-medium" data-hs-overlay="#hs-vertically-centered-modal">
+            Contact
+          </button>
+          <button class="btn-fill ml-auto">
+            <a href="projects.html"> Projects
+              <span class="ml-2">
+                <i class="fa-solid fa-arrow-right text-neutral-50 arrow"></i>
+              </span>
+            </a>
+          </button>
+        </div>
+        <div class="carousel-skills">
+          <div class="viewport-skills">
+            <div class="container-skills">
+              <div class="slide-skills">
+                <img src="/assets/images/html.svg" alt="">
+              </div>
+              <div class="slide-skills">
+                <img src="/assets/images/css.svg" alt="">
+              </div>
+              <div class="slide-skills">
+                <img src="/assets/images/javascript.svg" alt="">
+              </div>
+              <div class="slide-skills">
+                <img src="/assets/images/tailwind-css.svg" alt="">
+              </div>
+              <div class="slide-skills">
+                <img src="/assets/images/vite.svg" alt="">
+              </div>
+              <div class="slide-skills">
+                <img src="/assets/images/postcss.svg" alt="">
+              </div>
+              <div class="slide-skills">
+                <img src="/assets/images/react.svg" alt="">
+              </div>
+            </div>
+        </div>        
+      </section>
+    </main>
+  </body>
+  <script type="module" src="scripts/script.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+</html>

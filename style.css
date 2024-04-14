@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kumbh+Sans:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero {
+  background-image: url("assets/images/hero-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100svh;
+}
+
+/* CAROUSEL */
+
+.carousel-skills {
+  max-width: 48rem;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 30%;
+  .viewport-skills {
+    overflow: hidden;
+  }
+  .container-skills {
+    backface-visibility: hidden;
+    display: flex;
+    touch-action: pan-y;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+  .slide-skills {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+  }
+}
+
+/* BUTTONS */
+.btn-fill {
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: ghostwhite;
+  overflow: hidden;
+}
+
+.btn-fill a {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.btn-fill::before,
+.btn-fill::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.btn-fill::before {
+  content: "";
+  background: #c63fdb;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btn-fill:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.btn-fill:active {
+  transform: scale(0.95);
+}
+
+/* Define the hover animation for the arrow */
+@keyframes arrowHover {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the arrow when button is hovered */
+.btn-fill:hover .arrow {
+  animation: arrowHover 0.8s ease infinite;
+}
+
+.nav-item {
+  @apply mb-2 cursor-pointer duration-200 ease-in hover:text-neutral-500 lg:mb-0;
+}
+
+.project-card {
+  @apply flex h-full w-full items-center justify-center rounded-lg bg-cover bg-center bg-no-repeat;
+}
+
