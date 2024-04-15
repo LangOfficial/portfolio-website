@@ -1,5 +1,11 @@
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  base: "/portfolio-website/"
-})
+export default {
+  base: '/portfolio-website/',
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        something: resolve(__dirname, 'projects.html')
+      }
+    }
+  }
+}
