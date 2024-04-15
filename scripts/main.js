@@ -20,18 +20,6 @@ const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [
 const hero = document.querySelector("[data-hero]");
 const mobileWidth = 1024;
 
-// function heroSwitch() {
-//   console.log(window.innerWidth);
-//   if (window.innerWidth <= mobileWidth) {
-//     hero.src = '/assets/images/hero-mobile.png';
-//   } else {
-//     hero.src = '/assets/images/hero-desktop.png';
-//   }
-// }
-// window.addEventListener('resize', heroSwitch);
-
-// heroSwitch();
-
 const menuButton = document.getElementById("menu-button");
 const exitMenuButton = document.getElementById("exit-menu-button");
 const menu = document.getElementById("menu");
