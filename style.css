@@ -4,6 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* LANDING START*/
+
 .hero {
   background-image: url("assets/images/hero-mobile.png");
   background-repeat: no-repeat;
@@ -12,7 +14,13 @@
   min-height: 100svh;
 }
 
-/* CAROUSEL */
+.nav-item {
+  @apply mb-2 cursor-pointer duration-200 ease-in hover:text-neutral-500 lg:mb-0;
+}
+
+/* LANDING END*/
+
+/* CAROUSEL START*/
 
 .carousel-skills {
   max-width: 48rem;
@@ -36,7 +44,10 @@
   }
 }
 
-/* BUTTONS */
+/* CAROUSEL END*/
+
+/* BUTTONS START*/
+
 .btn-fill {
   position: relative;
   font-weight: 500;
@@ -85,7 +96,7 @@
   transform: scale(0.95);
 }
 
-/* Define the hover animation for the arrow */
+/* ARROWS */
 @keyframes arrowHover {
   0% {
     transform: translateX(0);
@@ -103,11 +114,15 @@
   animation: arrowHover 0.8s ease infinite;
 }
 
-.nav-item {
-  @apply mb-2 cursor-pointer duration-200 ease-in hover:text-neutral-500 lg:mb-0;
-}
+
+/* BUTTONS END*/
+
+/* PROJECTS START */
 
 .project-card {
   @apply flex h-full w-full items-center justify-center rounded-lg bg-cover bg-center bg-no-repeat;
 }
+
+/* PROJECTS END */
+
 
